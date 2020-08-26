@@ -27,6 +27,8 @@ class Client {
         // print("params: \(String(describing: params))")
         
         AF.request( BASE_URL+endPoint, method: method ).responseJSON{ data in
+//            print(self.BASE_URL+endPoint)
+//            print(data.result)
             switch data.result{
             case .success(_):
                 let decoder = JSONDecoder()
@@ -50,5 +52,6 @@ class Client {
     
     
 }
+
 
 

@@ -19,8 +19,8 @@ class MainPresenter {
         self.mainViewDelegate = delegate
     }
     
-    func makePlayingNowRequest() {
-        movieRepository.getPlayingNow(success: { (movies) in
+    func makePlayingNowRequest(page: Int) {
+        movieRepository.getPlayingNow(page: page, success: { (movies) in
             self.mainViewDelegate.renderMovies(movies: movies)
         }) { (err) in
             print("hay un error")
