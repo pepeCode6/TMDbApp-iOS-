@@ -8,11 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MainViewDelegate {
+    
+    var presenter: MainPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        presenter = MainPresenter(delegate: self)
+        presenter.makePlayingNowRequest()
+    }
+    
+    func renderMovies(movies: [MovieListItem]) {
+        print("Listos para render las movies")
+        print("\(movies.count)")
     }
 
 

@@ -17,6 +17,10 @@
 		B1ACFB2524F60E1300BE8DAC /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1ACFB2324F60E1300BE8DAC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1ACFB2824F60E1F00BE8DAC /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1ACFB2724F60E1F00BE8DAC /* SDWebImage.framework */; };
 		B1ACFB2924F60E1F00BE8DAC /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1ACFB2724F60E1F00BE8DAC /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1ACFB3024F610A500BE8DAC /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ACFB2F24F610A500BE8DAC /* Client.swift */; };
+		B1ACFB3524F6135F00BE8DAC /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ACFB3424F6135F00BE8DAC /* MovieRepository.swift */; };
+		B1ACFB3724F6195600BE8DAC /* MainViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ACFB3624F6195600BE8DAC /* MainViewDelegate.swift */; };
+		B1ACFB3924F6196600BE8DAC /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ACFB3824F6196600BE8DAC /* MainPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +49,10 @@
 		B1ACFB1C24F6026100BE8DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1ACFB2324F60E1300BE8DAC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		B1ACFB2724F60E1F00BE8DAC /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		B1ACFB2F24F610A500BE8DAC /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		B1ACFB3424F6135F00BE8DAC /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
+		B1ACFB3624F6195600BE8DAC /* MainViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDelegate.swift; sourceTree = "<group>"; };
+		B1ACFB3824F6196600BE8DAC /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,11 @@
 		B1ACFB0D24F6025F00BE8DAC /* TMDbApp */ = {
 			isa = PBXGroup;
 			children = (
+				B1ACFB3324F6134C00BE8DAC /* repositories */,
+				B1ACFB2E24F6108F00BE8DAC /* entities */,
+				B1ACFB2D24F6108200BE8DAC /* presenters */,
+				B1ACFB2C24F6107A00BE8DAC /* models */,
+				B1ACFB2B24F6106D00BE8DAC /* client */,
 				B1ACFB0E24F6025F00BE8DAC /* AppDelegate.swift */,
 				B1ACFB1024F6025F00BE8DAC /* SceneDelegate.swift */,
 				B1ACFB1224F6025F00BE8DAC /* ViewController.swift */,
@@ -98,6 +111,61 @@
 				B1ACFB2324F60E1300BE8DAC /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1ACFB2B24F6106D00BE8DAC /* client */ = {
+			isa = PBXGroup;
+			children = (
+				B1ACFB3224F6128E00BE8DAC /* req */,
+				B1ACFB3124F6128900BE8DAC /* res */,
+				B1ACFB2F24F610A500BE8DAC /* Client.swift */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		B1ACFB2C24F6107A00BE8DAC /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		B1ACFB2D24F6108200BE8DAC /* presenters */ = {
+			isa = PBXGroup;
+			children = (
+				B1ACFB3624F6195600BE8DAC /* MainViewDelegate.swift */,
+				B1ACFB3824F6196600BE8DAC /* MainPresenter.swift */,
+			);
+			path = presenters;
+			sourceTree = "<group>";
+		};
+		B1ACFB2E24F6108F00BE8DAC /* entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entities;
+			sourceTree = "<group>";
+		};
+		B1ACFB3124F6128900BE8DAC /* res */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		B1ACFB3224F6128E00BE8DAC /* req */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = req;
+			sourceTree = "<group>";
+		};
+		B1ACFB3324F6134C00BE8DAC /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B1ACFB3424F6135F00BE8DAC /* MovieRepository.swift */,
+			);
+			path = repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +265,10 @@
 			files = (
 				B1ACFB1324F6025F00BE8DAC /* ViewController.swift in Sources */,
 				B1ACFB0F24F6025F00BE8DAC /* AppDelegate.swift in Sources */,
+				B1ACFB3724F6195600BE8DAC /* MainViewDelegate.swift in Sources */,
+				B1ACFB3024F610A500BE8DAC /* Client.swift in Sources */,
+				B1ACFB3524F6135F00BE8DAC /* MovieRepository.swift in Sources */,
+				B1ACFB3924F6196600BE8DAC /* MainPresenter.swift in Sources */,
 				B1ACFB1124F6025F00BE8DAC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
